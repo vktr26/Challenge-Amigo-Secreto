@@ -8,7 +8,7 @@
     --color-white: #ffffff;
 }
 
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     width: 100%;
 }
 
-/* Banner */
+
 .header-banner {
     flex: 40%;
     display: flex;
@@ -51,7 +51,7 @@ body {
     text-shadow: 0 0 8px var(--color-tertiary);
 }
 
-/* Sección de entrada */
+
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -74,7 +74,7 @@ body {
     text-align: center;
 }
 
-/* Contenedores de entrada y botón */
+
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -98,7 +98,7 @@ body {
     opacity: 0.6;
 }
 
-/* Estilos de botón */
+
 button {
     padding: 12px 25px;
     font-family: monospace;
@@ -121,7 +121,7 @@ button:hover {
     border-radius: 0 8px 8px 0;
 }
 
-/* Listas */
+
 ul {
     list-style-type: none;
     font-size: 18px;
@@ -138,7 +138,6 @@ ul {
     text-shadow: 0 0 6px #00ff33;
 }
 
-/* Botón sortear */
 .button-draw {
     display: flex;
     align-items: center;
@@ -162,4 +161,27 @@ ul {
 .button-draw img {
     margin-right: 20px;
     filter: none;
+}
+
+.button-restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    margin-left: 10px;
+    background-color: black;
+    color: var(--color-tertiary);
+    border: 2px solid var(--color-tertiary);
+    border-radius: 8px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button-restart:hover {
+    background-color: var(--color-tertiary);
+    color: black;
+    box-shadow: 0 0 8px var(--color-tertiary);
 }

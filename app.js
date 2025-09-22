@@ -29,9 +29,15 @@ function sortearAmigo() {
     alert("No se pueden sortear más de 10 amigos.");
     return;
   }
+
   const indice = Math.floor(Math.random() * amigos.length);
   const amigoSorteado = amigos[indice];
+
   const resultadoLista = document.getElementById("resultado");
+
+  // 👇 Esto limpia el resultado anterior
+  resultadoLista.innerHTML = "";
+
   const li = document.createElement("li");
   li.textContent = "Tu amigo secreto es " + amigoSorteado;
   resultadoLista.appendChild(li);
@@ -46,4 +52,18 @@ inputAmigo.addEventListener('keydown', function(e) {
         inputAmigo.value = '';
         inputAmigo.focus();
     }
-});
+    });
+
+    function reiniciarAmigo() {
+    // Vacía el array de amigos (si lo tienes definido globalmente)
+    amigos = [];
+
+    // Limpia las listas en pantalla
+    document.getElementById('listaAmigos').innerHTML = '';
+    document.getElementById('resultado').innerHTML = '';
+
+    // Limpia el input y lo deja listo para escribir
+    const inputAmigo = document.getElementById('amigo');
+    inputAmigo.value = '';
+    inputAmigo.focus();
+}
